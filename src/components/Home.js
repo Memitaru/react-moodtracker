@@ -12,6 +12,10 @@ const BoxContainer = styled.div`
     min-height: 200px;
 `
 
+function linkToEntry(props, entry){
+    props.history.push(`/entry/${entry.id}`);
+}
+
 const Home = props => {
     console.log(props)
     return(
@@ -19,7 +23,9 @@ const Home = props => {
         <BoxContainer>
             {props.entries.map(entry => {
                 return(
-                    <MoodBox mood={entry.mood} key={entry.id} />
+                    <div onClick={() => linkToEntry(props, entry)}>
+                        <MoodBox mood={entry.mood} key={entry.id}/>
+                    </div>
                 )
             })}
         </BoxContainer>
