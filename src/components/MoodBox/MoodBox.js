@@ -6,6 +6,11 @@ const Box = styled.div`
     width: 50px;
     height: 50px;
     margin: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    &:hover{
+        border: 2px solid black;
+    }
 `
 
 const MoodBox = props => {
