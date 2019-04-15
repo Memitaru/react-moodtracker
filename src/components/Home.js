@@ -19,6 +19,8 @@ const KeyContainer = styled.div`
     max-width: 800px;
     margin: 10px auto;
     background-color: white;
+    flex-wrap: wrap;
+    justify-content: center;
 `
 
 const Box = styled.div`
