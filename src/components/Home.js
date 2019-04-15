@@ -41,7 +41,7 @@ const Mood = styled.p`
     padding-left: 10px;
 `
 
-const moods = ["happy", "sad"]
+const moods = ["happy", "sad", "stressed"]
 
 function linkToEntry(props, entry){
     props.history.push(`/entry/${entry.id}`);
@@ -65,7 +65,7 @@ const Home = props => {
             {props.entries.map(entry => {
                 return(
                     <div onClick={() => linkToEntry(props, entry)}>
-                        <MoodBox mood={entry.mood} key={entry.id}/>
+                        <MoodBox mood={entry.mood} key={entry.id} journal={entry.journal}/>
                     </div>
                 )
             })}

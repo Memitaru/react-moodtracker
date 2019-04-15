@@ -10,6 +10,12 @@ const starterData = [
         mood: 'sad',
         journal: 'test journal on sad day',
         date: 20190414
+    },
+    {
+        id: 2,
+        mood: 'stressed',
+        journal: '',
+        date: 1
     }
 ]
 
