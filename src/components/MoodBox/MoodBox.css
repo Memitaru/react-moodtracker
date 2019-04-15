@@ -9,3 +9,19 @@
 .stressed {
     background-color: orange;
 }
+
+.angry {
+    background-color: orangered;
+}
+
+.calm {
+    background-color: turquoise;
+}
+
+.ill {
+    background-color: gray;
+}
+
+.energetic {
+    background-color: pink;
+}

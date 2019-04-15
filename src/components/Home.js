@@ -8,9 +8,9 @@ const BoxContainer = styled.div`
     flex-wrap: wrap;
     width: 75%;
     max-width: 800px;
-    border: 2px solid darkgray;
     margin: 0 auto;
     min-height: 200px;
+    background-color: white;
 `
 
 const KeyContainer = styled.div`
@@ -18,7 +18,7 @@ const KeyContainer = styled.div`
     width: 75%;
     max-width: 800px;
     margin: 10px auto;
-    border: 1px solid lightblue;
+    background-color: white;
 `
 
 const Box = styled.div`
@@ -34,14 +34,13 @@ const KeyItem = styled.div`
     height: 40px;
     align-items: center;
     padding-left: 8px;
+    color: black;
 `
 
 const Mood = styled.p`
     text-transform: capitalize;
     padding-left: 10px;
 `
-
-const moods = ["happy", "sad", "stressed"]
 
 function linkToEntry(props, entry){
     props.history.push(`/entry/${entry.id}`);
@@ -52,7 +51,7 @@ const Home = props => {
     return(
         <>
         <KeyContainer>
-            {moods.map(mood => {
+            {props.moods.map(mood => {
                 return(
                     <KeyItem>
                         <Box className={`${mood}`}></Box>
